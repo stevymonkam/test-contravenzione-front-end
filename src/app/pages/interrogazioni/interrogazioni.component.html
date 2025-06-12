@@ -1,0 +1,305 @@
+
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="bg-light" id="sidebar-wrapper">
+
+        <app-header></app-header>
+
+      <div class="row" style="margin-right: 7px; margin-left: 7px; background-color: #fbda67; padding-top: 20px; padding-bottom: 70px;">
+          <div class="col-md-12 text-center">
+              <span style="max-height: 50px; max-width: 10px;"><img style="max-height: 50px; max-width: 30px;" src="assets/images/!.png" > </span>
+              <p>Attenzione !</p>
+              <p>Sono presenti criticitâ</p>
+          </div>
+      </div>
+      <br>
+      <div class="row" style="margin-right: 7px; margin-left: 7px; background-color: #00af50; padding-top: 20px; padding-bottom: 20px;">
+          <div class="col-md-12 text-center">
+              <p>
+                  <a href="#" style="color: white;">Info di servizio </a>
+              </p>
+              <p>
+                  <a href="#" style="color: white;">relative a </a>
+              </p>
+              <p>
+                  <a href="#" style="color: white;">ricerche, </a>
+              </p>
+              <p>
+                  <a href="#" style="color: white;">stampe, </a>
+              </p>
+              <p>
+                  <a href="#" style="color: white;">esportazioni </a>
+              </p>
+          </div>
+      </div>
+      <br>
+      <div class="row" style="margin-right: 7px; margin-left: 7px; padding-top: 20px; padding-bottom: 20px;">
+          <div class="col-md-12 mt-2">
+              <button class="btn btn-primary btn-lg btn-block"  style="background-color: #9dc4e7;"> Nuova </button>
+          </div>
+          <br>
+          <div class="col-md-12 mt-2">
+              <button class="btn btn-primary btn-lg btn-block"  style="background-color: #fed967;"> Segnalazioni </button>
+          </div>
+          <br>
+          <div class="col-md-12 mt-2">
+              <button class="btn btn-primary btn-lg btn-block"  (click) ="in()" style="background-color: #ecb38e;"> Interrogazioni </button>
+          </div>
+      </div>
+
+      <div class="list-group list-group-flush">
+
+      <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">Status</a> -->
+    </div>
+  </div>
+
+     <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom" style="background-color:#9dc4e7; border-bottom: 1px solid #1f4e78!important;height:66px;">
+          <button class="btn btn-primary" id="menu-toggle"><span class="navbar-toggler-icon"></span></button>
+
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom" style="background-color:#1f4e78; height: 85px;">
+          <div class="row" style="width: -webkit-fill-available;">
+              <div class="col-md-3"></div>
+              <div class="col-md-3"><div style="color: white;"></div></div>
+              <div class="col-md-3"><div style="color: white;"></div></div>
+              <div class="col-md-3"></div>
+          </div>
+
+        </nav>
+        <div class="container-fluid">
+          <div class="row" style="width: -webkit-fill-available; background-color: #1f4e78;">
+            <div class="col-md-3 my-auto"><div style="color: white; text-align: center; vertical-align: middle;">Interrogazioni</div></div>
+
+            <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-3 col-padding">
+                    <label for="">Azienda*</label>
+                    <mat-form-field appearance="outline">
+                        <select matNativeControl required>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </mat-form-field>
+                    <mat-error *ngIf="false">
+                        champ requis
+                    </mat-error>
+                </div>
+                    <div class="col-md-3 col-paddingextrg">
+                      <label for=""><span>&nbsp;</span></label>
+                      <mat-form-field class="example-full-width" floatLabel="never" color="primary" appearance="outline">
+                          <input matInput placeholder=""/>
+                      </mat-form-field>
+                      <mat-error *ngIf="valid">
+                          champ requis
+                      </mat-error>
+                  </div>
+                  <div class="col-md-1">
+                      <label for=""><span>&nbsp;</span></label>
+                      <div class="example-button-container" style="margin-top: 5px;">
+                          <button mat-mini-fab style="background-color:#579ddb" aria-label="Example icon button with a plus one icon">
+                              <mat-icon class="add" >+</mat-icon>
+                          </button>
+                      </div>
+                  </div>
+                  <div class="col-md-3 col-paddingextrg">
+                    <label for=""><span>&nbsp;</span></label>
+                    <mat-form-field class="example-full-width" floatLabel="never" color="primary" appearance="outline">
+                        <input matInput placeholder=""/>
+                    </mat-form-field>
+                    <mat-error *ngIf="valid">
+                        champ requis
+                    </mat-error>
+                </div>
+                <div class="col-md-1">
+                    <label for=""><span>&nbsp;</span></label>
+                    <div class="example-button-container" style="margin-top: 5px;">
+                        <button mat-mini-fab style="background-color:#579ddb" aria-label="Example icon button with a plus one icon">
+                            <mat-icon class="add" >+</mat-icon>
+                        </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-padding">
+                <div class="row">
+                    <div class="col-md-6" style="color: white;">
+                        <label></label>
+                        <button class="btn btn-primary btn-lg btn-block" style="background-color: #9dc4e7;">Cerca</button>
+                    </div>
+                    <div class="col-md-6" style="color: white;">
+                      <label></label>
+                        <button class="btn btn-primary btn-lg btn-block" style="background-color: #9dc4e7;">Cerca</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+            <br>
+           <div class="row">
+            <div class="col-md-1">
+              <label for=""><span>&nbsp;</span></label>
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary" appearance="outline">
+                  <input matInput placeholder=""/>
+              </mat-form-field>
+              <mat-error *ngIf="valid">
+                  champ requis
+              </mat-error>
+
+            </div>
+            <div class="col-md-2">
+              <label for=""><span>&nbsp;</span></label>
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary" appearance="outline">
+                  <input matInput placeholder=""/>
+              </mat-form-field>
+              <mat-error *ngIf="valid">
+                  champ requis
+              </mat-error>
+
+            </div>
+            <div class="col-md-1">
+              <label for=""><span>&nbsp;</span></label>
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary" appearance="outline">
+                  <input matInput placeholder=""/>
+              </mat-form-field>
+              <mat-error *ngIf="valid">
+                  champ requis
+              </mat-error>
+
+            </div>
+            <div class="col-md-1">
+              <label for=""><span>&nbsp;</span></label>
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary" appearance="outline">
+                  <input matInput placeholder=""/>
+              </mat-form-field>
+              <mat-error *ngIf="valid">
+                  champ requis
+              </mat-error>
+
+            </div>
+            <div class="col-md-1">
+              <label for=""><span>&nbsp;</span></label>
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary" appearance="outline">
+                  <input matInput placeholder=""/>
+              </mat-form-field>
+              <mat-error *ngIf="valid">
+                  champ requis
+              </mat-error>
+
+            </div>
+            <div class="col-md-1">
+              <label for=""><span>&nbsp;</span></label>
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary" appearance="outline">
+                  <input matInput placeholder=""/>
+              </mat-form-field>
+              <mat-error *ngIf="valid">
+                  champ requis
+              </mat-error>
+
+            </div>
+            <div class="col-md-2">
+              <label for=""><span>&nbsp;</span></label>
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary" appearance="outline">
+                  <input matInput placeholder=""/>
+              </mat-form-field>
+              <mat-error *ngIf="valid">
+                  champ requis
+              </mat-error>
+
+            </div>
+            <div class="col-md-1">
+              <label for=""><span>&nbsp;</span></label>
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary" appearance="outline">
+                  <input matInput placeholder=""/>
+              </mat-form-field>
+              <mat-error *ngIf="valid">
+                  champ requis
+              </mat-error>
+
+            </div>
+            <div class="col-md-1">
+              <label for=""><span>&nbsp;</span></label>
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary" appearance="outline">
+                  <input matInput placeholder=""/>
+              </mat-form-field>
+              <mat-error *ngIf="valid">
+                  champ requis
+              </mat-error>
+
+            </div>
+
+           </div>
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+              <!-- Name Column -->
+
+              <ng-container matColumnDef="societa">
+                <th mat-header-cell *matHeaderCellDef> Società. </th>
+                <td mat-cell *matCellDef="let element"> {{element.societa}} </td>
+              </ng-container>
+
+              <!-- Name Column -->
+              <ng-container matColumnDef="cod">
+                <th mat-header-cell *matHeaderCellDef> Cod. Contratto </th>
+                <td mat-cell *matCellDef="let element"> {{element.cod}} </td>
+              </ng-container>
+
+              <!-- Weight Column -->
+              <ng-container matColumnDef="tipologia">
+                <th mat-header-cell *matHeaderCellDef> Tipologia </th>
+                <td mat-cell *matCellDef="let element"> {{element.tipologia}} </td>
+              </ng-container>
+
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="sede">
+                <th mat-header-cell *matHeaderCellDef> Sede </th>
+                <td mat-cell *matCellDef="let element"> {{element.sede}} </td>
+              </ng-container>
+              <!-- Symbol Column -->
+
+              <ng-container matColumnDef="stato">
+                  <th mat-header-cell *matHeaderCellDef> Stato </th>
+                  <td mat-cell *matCellDef="let element"> {{element.stato}} </td>
+                </ng-container>
+                <!-- Symbol Column -->
+
+                <ng-container matColumnDef="data">
+                  <th mat-header-cell *matHeaderCellDef> Data Scad </th>
+                  <td mat-cell *matCellDef="let element"> {{element.data}} </td>
+                </ng-container>
+                <!-- Symbol Column -->
+
+                <ng-container matColumnDef="dataprev">
+                  <th mat-header-cell *matHeaderCellDef>  Data Scad preavviso </th>
+                  <td mat-cell *matCellDef="let element"> {{element.dataprev}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="owner">
+                  <th mat-header-cell *matHeaderCellDef> owner </th>
+                  <td mat-cell *matCellDef="let element"> {{element.owner}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="fornitore">
+                  <th mat-header-cell *matHeaderCellDef> Fornitore </th>
+                  <td mat-cell *matCellDef="let element"> {{element.fornitore}} </td>
+                </ng-container>
+                <!-- Symbol Column -->
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row [ngClass]="{'make-gold': i%2==0 }" *matRowDef="let row; columns: displayedColumns; let i = index"></tr>
+          </table>
+
+        </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+    </div>
+

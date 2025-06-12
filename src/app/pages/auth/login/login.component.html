@@ -1,0 +1,63 @@
+<img src="../assets/images/logo.png" class="img-responsive" alt="Cinque Terre" width="200" height="100" >
+
+
+<div class="container-fluid" style="position: relative;top:70px;font-size:20px;">
+    <div class="row">
+        <div class="col-sm-3" style=" background-color:rgb(15, 5, 146);"></div>
+        <div class="col-sm-6 text-center" style="font-size: 40px; background-color:rgb(15, 5, 146);padding: 30px; color:white;">
+            app contrati 2.0
+        </div>
+        <div class="col-sm-3" style=" background-color:rgb(15, 5, 146);"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 text-center" style="position: relative;top: 50px;">
+            <form  [formGroup]="fa" style="background-color: rgb(0, 140, 255);padding: 20px;">
+                <div class="row text-center" style="background-color: rgb(224, 169, 18);padding: 20px;margin: -20px -19px 0px -19px">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6 text-center" style="font-size: 30px;">login</div>
+                    <div class="col-sm-3"></div>
+                </div>
+                <div class="form-group row " style="position: relative;top:20px">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10 col-md-10">
+                        <input required type="email" formControlName="email"  class="form-control" id="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group row " style="position: relative;top:20px">
+                    <label for="inputPassword3" class="col-sm-2 col-md-2 col-form-label">Password</label>
+                    <div class="col-sm-10 col-md-10">
+                        <input required type="password" formControlName="password" class="form-control" id="password" placeholder="Password">
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10 col-md-10">
+                        <button (click)="login()" class="btn btn-primary text-center " >Sign in</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+    <footer id="sticky-footer" class="py-3  text-white-10" style="position: relative;top:80px;">
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-1">
+            </div>
+            <div class="col-sm-6">
+
+            </div>
+            <div class="col-sm-5">
+
+            </div>
+        </div>
+        </div>
+        <img src="../assets/images/help.png" width="27" heigth="9" >
+
+    </footer>
+
+</div>
+
